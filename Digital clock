@@ -1,0 +1,12 @@
+from tkinter import *
+import time
+def times():
+    current_time=time.strftime("%I:%M:%S:%p")
+    clk=Label(root,font='berlin 80',fg='black',bg='white',text=current_time)
+    clk.after(200,times)
+    clk.grid(row=0,column=1)
+root=Tk()
+root.title("Digital Clock")
+root.resizable(0,0)
+times()
+root.mainloop()
